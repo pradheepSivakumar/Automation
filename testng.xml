@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.saucelab.listeners.ListenerClass"></listener>
+		<listener class-name="com.saucelab.listeners.MethodInterceptor"></listener>
+		<listener class-name="com.saucelab.listeners.AnnotationTransformer"></listener>
+	</listeners>
+  <test thread-count="1" name="Test" parallel="methods">
+    <classes> 
+      <class name="com.saucelab.tests.LoginpageTest"/>
+      <class name="com.saucelab.tests.BaseTest"/>
+      <!--class name="com.saucelab.tests.HomepageTest"/-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
